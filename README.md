@@ -37,11 +37,11 @@ Import the watchdog in your script with:
   ```
 You can start a watchdog in your script with:</br>
   ```sh
-  run_watchdog('your_ini_file.ini')
+  start_watchdog('your_ini_file.ini')
   ```
 If you want to run more then one watchdog you can do this with multiple ini files
   ```sh
-  run_watchdog('your_ini_file2.ini')
+  start_watchdog('your_ini_file2.ini')
   ```
 If you want to change a flag in a ini file by script (in this example the restart flag from script1 to zero):
   ```sh
