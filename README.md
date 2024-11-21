@@ -47,3 +47,8 @@ If you want to change a flag in a ini file by script (in this example the restar
   ```sh
   watchdog_update('yourfile.ini', 'restart1', 0)
   ```
+You can set the time how often the script will check for ini file updates in the python_watchdog.py file standard is 5sec.</br>
+Change the following in python_watchdog.py :
+  ```sh
+  check_interval = 5
+  ```
