@@ -12,7 +12,9 @@ A simple watchdog that keeps an eye on your scripts so start/stop/restart them a
 A linux system and following common python libraries are used: configparser, threading, subprocess, time, os
 
 ## Example
-Just copy all the files in a folder and run example.py to play around.
+Just copy all the files in a folder and run example.py to play around.</br>
+The example.py will start a watchdog based on watchdog.ini (Start test1.py ans test2.py)</br>
+test2.py will run in an error after 20sec and trigger a restart.</br>
 
 ## Important
 The main process (your main script where you start the watchdog) has to run all the time. (infinite loop)</br>
@@ -24,6 +26,11 @@ Keep in mind when you set a stop flag to 1 you should set the start flag to 0
 ## Usage
 Place the python_watchdog.py in the same directory as your main script.</br>
 Create a .ini file for your scripts in the same directory (for example see watchdog.ini)</br></br>
+Define the flags for you scripts in the ini file:</br>
+Start = Script should be started</br>
+Stop = Script should be stoped</br>
+Restart = Script should be restarted if it stops or run in an error</br></br>
+
 Import the watchdog in your script with:
   ```sh
   from python_watchdog import *
